@@ -32,6 +32,19 @@ width: 100%;
   margin: 6px 18px;
   position: relative;
 }
+
+.navbar-container .auth-button {
+  border-radius: 15px;
+  padding: 5px 8px;
+  background-color: white;
+  color: red;
+  border-color: red ;
+  border-style: inset;
+  font-size: 18px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
 .marquee-text{
   font-size: 29px;
   font-weight: 600;
