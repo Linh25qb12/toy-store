@@ -3,12 +3,12 @@ import Link from 'next/link';
 import {AiOutlineShopping} from 'react-icons/ai';
 import Cart from './Cart';
 import { useStateContext } from '../context/StateContext';
-import {useUser} from '@auth0/nextjs-auth0';
+// import {useUser} from '@auth0/nextjs-auth0';
 
  
 const NavBar = () => {
   
-  const {user} = useUser();
+  // const {user} = useUser();
   const {showCart, setShowCart, totalQuantities} = useStateContext();
 
   return (
@@ -21,7 +21,7 @@ const NavBar = () => {
         <span className="cart-item-qty">{totalQuantities}</span> 
       </button>
       {showCart && <Cart />}
-      {!user && (
+      {/* {!user && (
         <Link href="/api/auth/login">
         <button type="button" className="auth-button">Login</button>
         </Link>
@@ -35,7 +35,7 @@ const NavBar = () => {
             <button type="button" className="auth-button">Admin</button>
           </Link>
         </div>
-      )}
+      )} */}
 
       
     </div>
