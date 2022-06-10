@@ -10,6 +10,7 @@ const NavBar = () => {
   
   const {user} = useUser();
   const {showCart, setShowCart, totalQuantities} = useStateContext();
+  console.log(user);
 
   return (
     <div className="navbar-container">
