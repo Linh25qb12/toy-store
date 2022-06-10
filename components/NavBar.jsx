@@ -21,12 +21,10 @@ const NavBar = () => {
         <span className="cart-item-qty">{totalQuantities}</span> 
       </button>
       {showCart && <Cart />}
-      {/* {!user && (
-        <Link href="/api/auth/login">
+      <Link href="/">
         <button type="button" className="auth-button">Login</button>
-        </Link>
-      )}
-      {user && (
+      </Link>
+      {/* {user && (
         <div>
           <Link href="/api/auth/logout">
             <button type="button" className="auth-button">Logout</button>
