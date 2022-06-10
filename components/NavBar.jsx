@@ -21,7 +21,7 @@ const NavBar = () => {
         <span className="cart-item-qty">{totalQuantities}</span> 
       </button>
       {showCart && <Cart />}
-      <Link href="/">
+      <Link href="/api/auth/login">
         <button type="button" className="auth-button">Login</button>
       </Link>
       {/* {user && (
