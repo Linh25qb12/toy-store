@@ -12,7 +12,7 @@ const Home = ({products, bannerData}) => {
         <h2>Best Selling Products</h2>
         <p>Toy of many variations</p>
       </div>
-      <div className="products-container">
+      <div className="products-container" id="products-container">
         {products?.map((product) => <Product key={product._id} product={product} />)}
       </div>
 
