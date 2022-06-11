@@ -10,33 +10,34 @@ const NavBar = () => {
   
   const {user} = useUser();
   const {showCart, setShowCart, totalQuantities} = useStateContext();
-  console.log(user);
+  // console.log(user);
 
   return (
     <div className="navbar-container">
       <p className="logo">
         <Link href="/">Fancy Toy Store</Link>
       </p>
+      <div>
+      {!user ?
+        <Link href="/api/auth/login">
+        <button type="button" className="auth-button">Login</button>
+        </Link>
+      :
+      <Link href="/api/auth/logout">
+      <button type="button" className="auth-button">Logout</button>
+    </Link>}
+      {user && user.email === "tuanlinhdoan2@gmail.com" ?
+          <Link href="https://toy-store.sanity.studio">
+            <button type="button" className="auth-button">Admin</button>
+          </Link>
+          : <></>
+      }
       <button type="button" className="cart-icon" onClick={() => setShowCart(true)}> 
         <AiOutlineShopping />
         <span className="cart-item-qty">{totalQuantities}</span> 
       </button>
       {showCart && <Cart />}
-      {!user && (
-        <Link href="/api/auth/login">
-        <button type="button" className="auth-button">Login</button>
-        </Link>
-      )}
-      {user && (
-        <div>
-          <Link href="/api/auth/logout">
-            <button type="button" className="auth-button">Logout</button>
-          </Link>
-          <Link href="https://toy-store.sanity.studio/studio">
-            <button type="button" className="auth-button">Admin</button>
-          </Link>
-        </div>
-      )}
+      </div>
 
       
     </div>
