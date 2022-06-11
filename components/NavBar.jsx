@@ -32,7 +32,7 @@ const NavBar = () => {
           <Link href="/api/auth/logout">
             <button type="button" className="auth-button">Logout</button>
           </Link>
-          <Link href="/admin">
+          <Link href="https://toy-store.sanity.studio/studio">
             <button type="button" className="auth-button">Admin</button>
           </Link>
         </div>
