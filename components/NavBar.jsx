@@ -27,7 +27,7 @@ const NavBar = () => {
       <button type="button" className="auth-button">Logout</button>
     </Link>}
       {user && user.email === "tuanlinhdoan2@gmail.com" ?
-          <Link href="https://toy-store.sanity.studio">
+          <Link href="/studio">
             <button type="button" className="auth-button">Admin</button>
           </Link>
           : <></>
