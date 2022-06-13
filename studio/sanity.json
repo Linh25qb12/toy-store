@@ -1,7 +1,8 @@
 {
   "root": true,
   "project": {
-    "name": "toy-ecommerce"
+    "name": "toy-ecommerce",
+    "basePath": "/studio"
   },
   "api": {
     "projectId": "6vs07w3m",
